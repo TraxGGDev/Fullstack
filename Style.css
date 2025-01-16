@@ -21,7 +21,6 @@ header{
 
 .container1 h2, p{
     text-align: center;
-    font-family: ;
 }
 
 footer{
@@ -40,7 +39,7 @@ a{
 }
 .redes{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 3%;
 }
 
