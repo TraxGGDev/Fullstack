@@ -1,24 +1,23 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0%;
-    padding: 0%;
-    background-color: #f7fafc;;
-
+    margin: 0;
+    padding: 0;
+    background-color: linear-gradient(to right, #FFFFFF, #F5F5F5);
 }
 
-header{
-
-  padding: 1.25rem;
-  border-bottom: 1px solid #e5e7eb;
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
+header {
+    padding: 1.25rem;
+    border-bottom: 1px solid #e5e7eb;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
 }
-.container1{
+
+.container1 {
     text-align: center;
     padding: 5px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 15px;
     background-color: white;
     padding: 1.5rem;
@@ -26,34 +25,50 @@ header{
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-#tituloproyecto{
+#tituloproyecto {
     text-align: center;
 }
 
-.container3{
-  text-align: center;
+.container3 {
+    text-align: center;
 }
 
-.proyectos{
+.proyectos {
     margin-top: 15px;
     background-color: white;
     padding: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 15px;
 }
 
-.formulario{
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+.proyectos:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
 }
 
-#nombre{
+.formulario {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.05);
+    margin: 1em auto;
+    max-width: 500px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.formulario:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+#nombre {
     margin-bottom: 5px;
+    margin-right: 25px;
 }
 
-#label-name{
+#label-name {
     margin-bottom: 2px;
     display: block;
     text-transform: uppercase;
@@ -61,162 +76,113 @@ header{
     font-family: 'Roboto', sans-serif;
 }
 
-.inputName{
-    border: 1px solid #e5e7eb; 
-    padding: 0.75rem; 
+.inputName {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem;
     width: 100%;
     border-radius: 0.5rem;
+    resize: none;
 }
 
-#mensaje{
-    padding: 10px ;
+#mensaje {
+    padding: 10px;
     width: 100%;
     border-radius: 4px;
     margin-top: 15px;
     border: 1px solid #ccc;
-    
 }
 
-.boton-enviar{
-    background-color: skyblue;
+.boton-enviar {
+    background-color: rgb(43, 177, 230);
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-enviar:hover {
+    background-color: deepskyblue;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.2);
+}
+
+.boton-enviar:focus {
+    outline: 2px solid dodgerblue;
+    outline-offset: 2px;
+}
+
+.boton-enviar:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+    .container1, .proyectos {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
     
-}
+    .formulario {
+        margin: 1em 5%;
+    }
+    
+    .boton-enviar {
+        padding: 8px 16px;
+    }
 
-.wrapper{
-    width: fit-content;
-    height:auto;
-}
-button{
-    width:200px;
-    height:70px;
-    background: linear-gradient(to left top, #230c36 50%, #33146e 50%);
-    border-style: none;
-    color:#fff;
-    font-size: 23px;
-    letter-spacing: 3px;
-    font-family: 'Lato';
-    font-weight: 600;
-    outline: none;
-    cursor: pointer;
-    position: relative;
-    padding: 0px;
-    overflow: hidden;
-    transition: all .5s;
-    box-shadow: 0px 1px 2px rgba(0,0,0,.2);
-}
-button span{
-    position: absolute;
-    display: block;
-}
-button span:nth-child(1){
-    height: 3px;
-    width:200px;
-    top:0px;
-    left:-200px;
-    background: linear-gradient(to right, rgba(0,0,0,0), #f6e58d);
-    border-top-right-radius: 1px;
-    border-bottom-right-radius: 1px;
-    animation: span1 2s linear infinite;
-    animation-delay: 1s;
-}
+    footer {
+        font-size: 0.8rem;
+        padding: 1.5rem 0.5rem;
+    }
 
-@keyframes span1{
-    0%{
-        left:-200px
-    }
-    100%{
-        left:200px;
-    }
-}
-button span:nth-child(2){
-    height: 70px;
-    width: 3px;
-    top:-70px;
-    right:0px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0), #f6e58d);
-    border-bottom-left-radius: 1px;
-    border-bottom-right-radius: 1px;
-    animation: span2 2s linear infinite;
-    animation-delay: 2s;
-}
-@keyframes span2{
-    0%{
-        top:-70px;
-    }
-    100%{
-        top:70px;
-    }
-}
-button span:nth-child(3){
-    height:3px;
-    width:200px;
-    right:-200px;
-    bottom: 0px;
-    background: linear-gradient(to left, rgba(0,0,0,0), #f6e58d);
-    border-top-left-radius: 1px;
-    border-bottom-left-radius: 1px;
-    animation: span3 2s linear infinite;
-    animation-delay: 3s;
-}
-@keyframes span3{
-    0%{
-        right:-200px;
-    }
-    100%{
-        right: 200px;
+    .redes {
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
-button span:nth-child(4){
-    height:70px;
-    width:3px;
-    bottom:-70px;
-    left:0px;
-    background: linear-gradient(to top, rgba(0,0,0,0), #f6e58d);
-    border-top-right-radius: 1px;
-    border-top-left-radius: 1px;
-    animation: span4 2s linear infinite;
-    animation-delay: 4s;
-}
-@keyframes span4{
-    0%{
-        bottom: -70px;
-    }
-    100%{
-        bottom:70px;
-    }
-}
-
-button:hover{
-    transition: all .5s;
-    transform: rotate(-3deg) scale(1.1);
-    box-shadow: 0px 3px 5px rgba(0,0,0,.4);
-}
-button:hover span{
-    animation-play-state: paused;
-}
-
-footer{
+footer {
     text-align: center;
     text-transform: uppercase;
-    color: gray;
-    padding: 5%;
+    color: #555;
+    padding: 2rem 1rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
-    
+    background-color: #f4f4f4;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
 }
-a{
+
+a {
     text-decoration: none;
     color: gray;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    position: relative;
 }
-.redes{
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #1E88E5;
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s ease;
+}
+
+a:hover {
+    color: #1E88E5;
+    text-shadow: 0 0 8px rgba(30, 136, 229, 0.6);
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+.redes {
     display: flex;
     justify-content: space-around;
     margin-top: 3%;
 }
-
